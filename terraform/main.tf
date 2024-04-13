@@ -3,6 +3,7 @@ provider "kubernetes" {
   cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
 }
 
+# AWS provider
 provider "aws" {
   region = var.region
 }
@@ -13,4 +14,4 @@ locals {
   cluster_name = var.clusterName
 }
 
-##
+###
